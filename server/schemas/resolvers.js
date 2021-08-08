@@ -4,6 +4,10 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    questions: async () => {
+      return questions.findOne();
+    }
+    /*
     users: async () => {
       return User.find().populate('thoughts');
     },
@@ -23,6 +27,7 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    */
   },
 
   Mutation: {
@@ -48,6 +53,7 @@ const resolvers = {
 
       return { token, user };
     },
+    /*
     addThought: async (parent, { thoughtText }, context) => {
       if (context.user) {
         const thought = await Thought.create({
@@ -114,6 +120,7 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    */
   },
 };
 

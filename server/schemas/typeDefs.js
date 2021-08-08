@@ -9,19 +9,12 @@ const typeDefs = gql`
     thoughts: [Thought]!
   }
 
-  type Thought {
+  type Question {
     _id: ID
     thoughtText: String
     thoughtAuthor: String
     createdAt: String
     comments: [Comment]!
-  }
-
-  type Comment {
-    _id: ID
-    commentText: String
-    commentAuthor: String
-    createdAt: String
   }
 
   type Auth {
@@ -33,7 +26,7 @@ const typeDefs = gql`
     users: [User]
     user(username: String!): User
     thoughts(username: String): [Thought]
-    thought(thoughtId: ID!): Thought
+    thought(questionId: ID!): Question
     me: User
   }
 
