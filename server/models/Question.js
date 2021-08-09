@@ -1,11 +1,29 @@
 const { Schema } = require('mongoose');
 
+/*
+    "Number": 19,
+    "QuestionType": "",
+    "Left": "Oui, ",
+    "Choices": [],
+    "Right": " avec toi",
+    "Translation": "Yes, I agree with you.",
+    "Hint": "",
+    "Answer": "je suis d'accord",
+    "LearningLink": "Être d'accord avec = to agree with",
+    "Level": "A1"
+
+*/
+
 const questionSchema = new Schema({
-  left: {
+  number: {
     type: String,
     required: true,
   },
   questionType: {
+    type: String,
+    required: true,
+  },
+  left: {
     type: String,
     required: true,
   },
@@ -18,17 +36,24 @@ const questionSchema = new Schema({
     type: String,
     required: true,
   },
-  hint: {
+  translation: {
     type: String,
+    required: true,
   },
-  learningLink: {
+  hint: {
     type: String,
   },
   answer: [
     {
       type: String,
     }
-  ]
+  ],
+  learningLink: {
+    type: String,
+  },
+  level: {
+    type: String,
+  },
 /*
   "Left: "Vous le",
   "Choices": ["dépeinsez", "dépeinez", "dépeindez", "dépeignez'],

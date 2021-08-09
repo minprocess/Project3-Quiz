@@ -2,14 +2,18 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const quizSchema = new Schema({
-  quizNumber: 
-  description: {
-    type:String,
+  quizNumber: {
+    type: Number,
   },
-  questions: [
+  description: {
+    type: String,
+  },
+  numberCorrect: {
+    type: Number,
+  },
+  numberIncorrect: {
 
-  ],
-
+  },
 /*
   quit
   description: String,
