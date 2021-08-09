@@ -12,16 +12,6 @@ const quizSchema = new Schema({
     type: Number,
   },
   numberIncorrect: {
-
+    type: Number,
   },
-/*
-  quit
-  description: String,
-  Questions[
-  Text left
-  Menu
-  Choice[ ]
-  Answer
-  Hint
-*/
 })

@@ -9,12 +9,18 @@ const typeDefs = gql`
     thoughts: [Thought]!
   }
 
+
   type Question {
-    _id: ID
-    thoughtText: String
-    thoughtAuthor: String
-    createdAt: String
-    comments: [Comment]!
+    number: Number
+    questionType: String
+    left: String
+    choices: [String]
+    right: String
+    translation: String
+    hint: String
+    answer: [String]
+    learningLink: String
+    level: String
   }
 
   type Auth {
@@ -26,6 +32,8 @@ const typeDefs = gql`
     users: [User]
     user(username: String!): User
     me: User
+    questions: [Question]
+    question(number: Number): Question
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
