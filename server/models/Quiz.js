@@ -14,4 +14,13 @@ const quizSchema = new Schema({
   numberIncorrect: {
     type: Number,
   },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    get: (timestamp) => dateFormat(timestamp),
+  },
 })
+
+const Quiz = model('Quiz', quizSchema);
+
+module.exports = Quiz;

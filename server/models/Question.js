@@ -62,4 +62,7 @@ const questionSchema = new Schema({
   "Answer" : "dépeinez"
   */
 });
-module.exports = questionSchema;
+
+const Question = model('Question', questionSchema);
+
+module.exports = Question;
