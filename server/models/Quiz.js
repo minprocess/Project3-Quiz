@@ -14,7 +14,7 @@ const quizSchema = new Schema({
   numberIncorrect: {
     type: Number,
   },
-  createdAt: {
+  givenOn: {
     type: Date,
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),

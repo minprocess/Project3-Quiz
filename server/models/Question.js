@@ -1,4 +1,6 @@
 const { Schema, model } = require('mongoose');
+var random = require('mongoose-random');
+
 
 /*
     "Number": 19,
@@ -42,17 +44,21 @@ const questionSchema = new Schema({
   },
   hint: {
     type: String,
+    required: true,
   },
   answer: [
     {
       type: String,
+      required: true,
     }
   ],
   learningLink: {
     type: String,
+    required: true,
   },
   level: {
     type: String,
+    required: true,
   },
 /*
   "Left: "Vous le",
@@ -62,6 +68,8 @@ const questionSchema = new Schema({
   "Answer" : "dépeinez"
   */
 });
+ 
+questionSchema.plugin(random, { path: 'r' }); // by default `path` is `random`. It's used internally to store a random value on each doc.
 
 const Question = model('Question', questionSchema);
 

@@ -6,12 +6,10 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    thoughts: [Thought]!
   }
 
-
   type Question {
-    number: Number
+    number: Int
     questionType: String
     left: String
     choices: [String]
@@ -29,15 +27,15 @@ const typeDefs = gql`
   }
 
   type Query {
-    users: [User]
-    user(username: String!): User
     me: User
-    questions: [Question]
-    question(number: Number): Question
+    questions(limit: Int!, level: String!): [Question]
+    question(number: Int, level: String!): Question
   }
+  
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    updateUserLevel(level: String!): User
   }
 `;
 

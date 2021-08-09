@@ -1,17 +1,19 @@
 const db = require('../config/connection');
-const { User, Thought } = require('../models');
+const { User, Question } = require('../models');
 const userSeeds = require('./userSeeds.json');
-const thoughtSeeds = require('./questionSeeds.json');
+const questionSeeds = require('./questionSeeds.json');
 
 db.once('open', async () => {
   try {
     await Question.deleteMany({});
     await User.deleteMany({});
 
-    await User.create(userSeeds);
+    await User.create(userSeeds[0]);
+    await User.create(userSeeds[1]);
 
     for (let i = 0; i < questionSeeds.length; i++) {
-      const { _id, thoughtAuthor } = await Question.create(questionSeeds[i]);
+      await Question.create(questionSeeds[i]);
+      /*
       const user = await User.findOneAndUpdate(
         { username: questionAuthor },
         {
@@ -20,6 +22,7 @@ db.once('open', async () => {
           },
         }
       );
+      */
     }
   } catch (err) {
     console.error(err);

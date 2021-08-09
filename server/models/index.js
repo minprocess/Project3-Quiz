@@ -1,5 +1,5 @@
 const User = require('./User');
 const Question = require('./Question');
-const Quiz = require('./Quiz');
+//const Quiz = require('./Quiz');
 
 module.exports = { User, Question };
