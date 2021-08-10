@@ -8,6 +8,7 @@ import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 
 const ThoughtForm = () => {
+
   const [thoughtText, setThoughtText] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
