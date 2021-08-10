@@ -23,11 +23,9 @@ const questionSchema = new Schema({
   },
   questionType: {
     type: String,
-    required: true,
   },
   left: {
     type: String,
-    required: true,
   },
   choices: [
     {
@@ -36,22 +34,17 @@ const questionSchema = new Schema({
   ],
   right: {
     type: String,
-    required: true,
   },
   translation: {
     type: String,
-    required: true,
   },
   hint: {
     type: String,
-    required: true,
   },
-  answer: [
-    {
+  answer: {
       type: String,
       required: true,
-    }
-  ],
+  },
   learningLink: {
     type: String,
     required: true,

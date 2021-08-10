@@ -1,242 +1,242 @@
 [
 {
-    "Number": 1,
+    "number": 1,
     "QuestionType": "",
     "Left": "Vous le ",
     "Choices": ["dépeinsez", "dépeinez", "dépeindez", "dépeignez"],
     "Right": " de manière très négative. (You depict him very negatively.)",
     "Translation": "",
     "Hint": "HINT: Conjugate 'dépeindre' (to depict) in Le Présent",
-    "Answer": "dépeinez",
-    "LearningLink": "Conjugate regular -dre verbs in Le Présent (present tense)",
-    "Level": "A2"
+    "answer": "dépeinez",
+    "learningLink": "Conjugate regular -dre verbs in Le Présent (present tense)",
+    "level": "A2"
   },
   {
-    "Number": 2,
+    "number": 2,
     "QuestionType": "",
     "Left": "Elle a une ",
     "Choices": ["vingtième de", "vigntaine de", "vingt", "vingtaine"],
     "Right": " médailles. (She has about twenty medals.)",
     "Translation": "",
     "Hint": "",
-    "Answer": "vingtaine de",
-    "LearningLink": "Une dizaine = Ten or so (approximate numbers)",
-    "Level": "A2"
+    "answer": "vingtaine de",
+    "learningLink": "Une dizaine = Ten or so (approximate numbers)",
+    "level": "A2"
   },
   {
-    "Number": 3,
+    "number": 3,
     "QuestionType": "",
     "Left": "How could you say: 'I have faith in something else.'?",
     "Choices": ["J'ai foi en quelque chose d'autre.", "J'ai foi en une chose autre.", "J'ai foi en quelque chose autre.", "J'ai foi en autre chose.", "J'ai foi en quelqu'autre."],
     "Right": "",
     "Translation": "",
     "Hint": "",
-    "Answer": "J'ai foi en quelque chose d'autre",
-    "LearningLink": "Autre chose / quelque chose d'autre = Something else (indefinite pronouns)",
-    "Level": "A2"
+    "answer": "J'ai foi en quelque chose d'autre",
+    "learningLink": "Autre chose / quelque chose d'autre = Something else (indefinite pronouns)",
+    "level": "A2"
   },
   {
-    "Number": 4,
+    "number": 4,
     "QuestionType": "",
     "Left": "Nous ",
     "Choices": [],
     "Right": " la table. (We're clearing the table.)",
     "Translation": "",
     "Hint": "HINT: Conjugate 'desservir' in Le Présent",
-    "Answer": "desservons",
-    "LearningLink": "Conjugate servir and other -vir verbs in Le Présent (present tense)",
-    "Level": "A2"
+    "answer": "desservons",
+    "learningLink": "Conjugate servir and other -vir verbs in Le Présent (present tense)",
+    "level": "A2"
   },
   {
-    "Number": 5,
+    "number": 5,
     "QuestionType": "",
     "Left": "Nous avons ",
     "Choices": [],
     "Right": " cas difficiles. (We have several difficult cases.)",
     "Translation": "",
     "Hint": "",
-    "Answer": "plusieurs",
-    "LearningLink": "Quelques, plusieurs, de nombreux = A few, several, many (quantities)",
-    "Level": "A2"
+    "answer": "plusieurs",
+    "learningLink": "Quelques, plusieurs, de nombreux = A few, several, many (quantities)",
+    "level": "A2"
   },
   {
-    "Number": 6,
+    "number": 6,
     "QuestionType": "",
     "Left": "Nous ",
     "Choices": ["recevons", "recevoyons", "reçons", "reçoivons"],
     "Right": " des amis à déjeuner. (We're having friends over for lunch.)",
     "Translation": "",
     "Hint": "HINT: Conjugate 'recevoir' in Le Présent",
-    "Answer": "recevons",
-    "LearningLink": "Conjugate recevoir and other -cevoir verbs in Le Présent (present tense)",
-    "Level": "A2"
+    "answer": "recevons",
+    "learningLink": "Conjugate recevoir and other -cevoir verbs in Le Présent (present tense)",
+    "level": "A2"
   },
   {
-    "Number": 7,
+    "number": 7,
     "QuestionType": "",
     "Left": "Marc attend ", 
     "Choices": ["patiemment", "patiement", "patient", "patientment"],
     "Right": ". (Marc waits patiently.)",
     "Translation": "",
     "Hint": "HINT: patient = patient",
-    "Answer": "patiemment",
-    "LearningLink": "",
-    "Level": "A2"
+    "answer": "patiemment",
+    "learningLink": "Forming adverbs from adjectives",
+    "level": "A2"
   },
   {
-    "Number": 8,
+    "number": 8,
     "QuestionType": "",
     "Left": "Rearrange the words in this statement to turn it into a question. «Vous vous levez»",
     "Choices": [],
     "Right": "",
     "Translation": "",
     "Hint": "",
-    "Answer": "Vous levez-vous",
-    "LearningLink": "Forming inverted questions in Le Présent (except il, elle, on forms)",
-    "Level": "A2"
+    "answer": "Vous levez-vous",
+    "learningLink": "Forming inverted questions in Le Présent (except il, elle, on forms)",
+    "level": "A2"
   },
   {
-    "Number": 9,
+    "number": 9,
     "QuestionType": "",
     "Left": "Ma tante conduit ",
     "Choices": ["aussi doucement de", "comme doucement comme", "aussi doucemente que"],
     "Right": " mon oncle. (My aunt drives as carefully as my uncle.)",
     "Translation": "",
     "Hint": "HINT: doucement = carefully",
-    "Answer": "aussi doucement que",
-    "LearningLink": "Making comparisons with adjectives: plus... que, aussi... que, moins... que",
-    "Level": "A2"
+    "answer": "aussi doucement que",
+    "learningLink": "Making comparisons with adjectives: plus... que, aussi... que, moins... que",
+    "level": "A2"
   },
   {
-    "Number": 10,
+    "number": 10,
     "QuestionType": "",
     "Left": "Write 'He is not tall enough.': Il ",
     "Choices": ["n'est pas grand assez", "est assez grand", "est pas assez grand", "n'est pas assez grand"],
     "Right": ".",
     "Translation": "",
     "Hint": "",
-    "Answer": "est pas assez grand",
-    "LearningLink": "Ne ... pas assez (de) = Not enough (of)",
-    "Level": "A2"
+    "answer": "est pas assez grand",
+    "learningLink": "Ne ... pas assez (de) = Not enough (of)",
+    "level": "A2"
   },
   {
-    "Number": 11,
+    "number": 11,
     "QuestionType": "",
     "Left": "What is the meaning of 'Non, pas lui!'? ",
     "Choices": ["No, not him!", "No, not them!", "No, not her!"],
     "Right": "",
     "Translation": "",
     "Hint": "",
-    "Answer": "No, not him!",
-    "LearningLink": "Moi, toi, lui, elle = me, you, him, her (stress pronouns)",
-    "Level": "A1"
+    "answer": "No, not him!",
+    "learningLink": "Moi, toi, lui, elle = me, you, him, her (stress pronouns)",
+    "level": "A1"
     },
     {
-    "Number": 12,
+    "number": 12,
     "QuestionType": "",
     "Left": "<<Jean n'aime pas Marcel. Moi non plus>> means ",
     "Choices": ["Jean doesn't like Marcel. I don't any more", "Jean doesn't like Marcel. Neither do I", "Jean doesn't like Marcel. But I do"],
     "Right": "",
     "Translation": "",
     "Hint": "",
-    "Answer": "Jean doesn't like Marcel. Neither do I",
-    "LearningLink": "Non plus = neither / nor (negation)",
-    "Level": "A1"
+    "answer": "Jean doesn't like Marcel. Neither do I",
+    "learningLink": "Non plus = neither / nor (negation)",
+    "level": "A1"
     },
     {
-    "Number": 13,
+    "number": 13,
     "QuestionType": "",
     "Left": "",
     "Choices": [],
     "Right": "",
     "Translation": "It is twenty-five past nine",
     "Hint": "(HINT: Use the 12-hour clock)",
-    "Answer": "Il est neuf heures vingt-cinq",
-    "LearningLink": "Telling time in French - simple",
-    "Level": "A1"
+    "answer": "Il est neuf heures vingt-cinq",
+    "learningLink": "Telling time in French - simple",
+    "level": "A1"
     },
     {
-    "Number": 14,
+    "number": 14,
     "QuestionType": "",
     "Left": "J'ai ",
     "Choices": [],
     "Right": " euros",
     "Translation": "I have eighty-eight euros",
     "Hint": "",
-    "Answer": "quatre-vingt-huit",
-    "LearningLink": "Expressing numbers 70 to 999",
-    "Level": "A1"
+    "answer": "quatre-vingt-huit",
+    "learningLink": "Expressing numbers 70 to 999",
+    "level": "A1"
     },
     {
-    "Number": 15,
+    "number": 15,
     "QuestionType": "",
     "Left": "",
     "Choices": [],
     "Right": "êtes-vous arrivé",
     "Translation": "When did you arrive",
     "Hint": "",
-    "Answer": "Quand",
-    "LearningLink": "Questions with qui, que, quoi, quand, où, comment, pourquoi, combien",
-    "Level": "A1"
+    "answer": "Quand",
+    "learningLink": "Questions with qui, que, quoi, quand, où, comment, pourquoi, combien",
+    "level": "A1"
     },
     {
-    "Number": 16,
+    "number": 16,
     "QuestionType": "",
     "Left": "Vous ",
     "Choices": [],
     "Right": "manger votre repas maintenant",
     "Translation": "",
     "Hint": "(HINT: Conjugate devoir (must) in Le Presént",
-    "Answer": "devez",
-    "LearningLink": "Conjugate devoir in Le Présent (present tense)",
-    "Level": "A1"
+    "answer": "devez",
+    "learningLink": "Conjugate devoir in Le Présent (present tense)",
+    "level": "A1"
     },
     {
-    "Number": 17,
+    "number": 17,
     "QuestionType": "",
     "Left": "How would you best say 'I'll come in five minutes.'?",
     "Choices": ["J'arriverai dans cinq minutes.", "J'arrivais dans cinq minutes.", "Je suis arrivé dans cinq minutes.", "J'arrive dans cinq minutes."],
     "Right": "",
     "Translation": "",
     "Hint": "",
-    "Answer": "J'arrive dans cinq minutes.",
-    "LearningLink": "Using Le Présent for immediate/near future actions",
-    "Level": "A1"
+    "answer": "J'arrive dans cinq minutes.",
+    "learningLink": "Using Le Présent for immediate/near future actions",
+    "level": "A1"
     },
     {
-    "Number": 18,
+    "number": 18,
     "QuestionType": "",
     "Left": "<<Je ne vais jamais à Londres>> means ",
     "Choices": ["I don't go to London", "I never go to London", "I don't go to London any more"],
     "Right": "",
     "Translation": "",
     "Hint": "",
-    "Answer": "I never go to London",
-    "LearningLink": "Ne ... jamais = Never (negation)",
-    "Level": "A1"
+    "answer": "I never go to London",
+    "learningLink": "Ne ... jamais = Never (negation)",
+    "level": "A1"
     },
     {
-    "Number": 19,
+    "number": 19,
     "QuestionType": "",
     "Left": "Oui, ",
     "Choices": [],
     "Right": " avec toi",
     "Translation": "Yes, I agree with you.",
     "Hint": "",
-    "Answer": "je suis d'accord",
-    "LearningLink": "Être d'accord avec = to agree with",
-    "Level": "A1"
+    "answer": "je suis d'accord",
+    "learningLink": "Être d'accord avec = to agree with",
+    "level": "A1"
     },
     {
-    "Number": 20,
+    "number": 20,
     "QuestionType": "",
     "Left": "How would you say: 'They think he's lazy.'? ", 
     "Choices": ["Ils pensent qu'est paresseux", "Ils pensent qu'il est paresseux", "Ils pensent il est paresseux", "Ils pensent il paresseux"],
     "Right": "",
     "Translation": "",
     "Hint": "",
-    "Answer": "Ils pensent qu'il est paresseux",
-    "LearningLink": "Penser que, croire que = To think that, to believe that",
-    "Level": "A1"
+    "answer": "Ils pensent qu'il est paresseux",
+    "learningLink": "Penser que, croire que = To think that, to believe that",
+    "level": "A1"
     }
 ]

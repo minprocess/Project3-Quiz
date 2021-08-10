@@ -16,7 +16,7 @@ const typeDefs = gql`
     right: String
     translation: String
     hint: String
-    answer: [String]
+    answer: String
     learningLink: String
     level: String
   }
