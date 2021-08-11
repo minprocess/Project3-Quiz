@@ -6,8 +6,12 @@ import QuestionList from '../components/QuestionList';
 import { QUERY_QUESTIONS } from '../utils/queries';
 
 const Quiz = () => {
+
+  console.log('quiz.js')
   const { loading, data } = useQuery(QUERY_QUESTIONS);
   const questions = data?.questions || [];
+
+  console.log(data)
 
   return (
     <main>

@@ -9,7 +9,7 @@ const StartForm = () => {
         <Link to="/quiz">Quiz</Link>
       ) : (
         <p>
-        You need to be logged in to share your thoughts. Please{' '}
+        You need to be logged in to take a quiz. Please{' '}
         <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
       </p>
       )}

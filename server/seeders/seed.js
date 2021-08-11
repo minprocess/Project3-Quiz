@@ -13,16 +13,7 @@ db.once('open', async () => {
 
     for (let i = 0; i < questionSeeds.length; i++) {
       await Question.create(questionSeeds[i]);
-      /*
-      const user = await User.findOneAndUpdate(
-        { username: questionAuthor },
-        {
-          $addToSet: {
-            thoughts: _id,
-          },
-        }
-      );
-      */
+
     }
   } catch (err) {
     console.error(err);
