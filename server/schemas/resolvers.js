@@ -5,8 +5,9 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     questions: async (parent, { limit, level }) => {
-    // get 10 random songs
-      return Question.findRandom().limit(limit)
+      const quest = await Question.find()
+      return quest
+//      return Question.findRandom().limit(limit)
     },
     me: async (parent, context) => {
       if (context.user) {

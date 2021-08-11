@@ -28,7 +28,8 @@ const typeDefs = gql`
 
   type Query {
     me: User
-    questions(limit: Int!, level: String!): [Question]
+    questions: [Question]
+    questions2(limit: Int, level: String): [Question]
     question(number: Int, level: String!): Question
   }
   

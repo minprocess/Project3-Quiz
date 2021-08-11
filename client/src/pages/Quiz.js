@@ -7,11 +7,11 @@ import { QUERY_QUESTIONS } from '../utils/queries';
 
 const Quiz = () => {
 
-  console.log('quiz.js')
   const { loading, data } = useQuery(QUERY_QUESTIONS);
   const questions = data?.questions || [];
 
-  console.log(data)
+
+  console.log("quiz question.left", questions)
 
   return (
     <main>
