@@ -29,26 +29,14 @@ export const QUERY_QUESTIONS = gql`
   query getQuestions {
     questions {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-    }
-  }
-`;
-
-export const QUERY_SINGLE_QUESTION = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-        commentAuthor
-        createdAt
-      }
+      number
+      questionType
+      left
+      choices
+      right
+      answer
+      learningLink
+      level
     }
   }
 `;

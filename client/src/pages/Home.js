@@ -4,8 +4,6 @@ import { useQuery } from '@apollo/client';
 import StartForm from '../components/StartForm';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const thoughts = data?.thoughts || [];
 
   return (
     <main>
