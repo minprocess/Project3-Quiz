@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-var random = require('mongoose-random');
+//var random = require('mongoose-random');
 
 
 /*
@@ -62,7 +62,7 @@ const questionSchema = new Schema({
   */
 });
  
-questionSchema.plugin(random, { path: 'r' }); // by default `path` is `random`. It's used internally to store a random value on each doc.
+//questionSchema.plugin(random, { path: 'r' }); // by default `path` is `random`. It's used internally to store a random value on each doc.
 
 const Question = model('Question', questionSchema);
 
