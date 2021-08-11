@@ -23,6 +23,14 @@ export const QUERY_USER = gql`
 export const QUERY_QUESTIONS = gql`
   query getQuestions {
     questions {
+      number
+    }
+  }
+`;
+
+export const QUERY_QUESTIONS2 = gql`
+  query getQuestions {
+    questions {
       _id
       number
       questionType

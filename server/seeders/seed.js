@@ -8,26 +8,9 @@ db.once('open', async () => {
     await Question.deleteMany({});
     await User.deleteMany({});
 
-    await User.create(userSeeds[0]);
-    await User.create(userSeeds[1]);
+    await User.create(userSeeds);
+    await Question.create(questionSeeds)
 
-    await Question.create(questionSeeds[4])
-    console.log('   ')
-    console.log('***')
-    console.log('i ', 4)
-    console.log(questionSeeds[4])
-    console.log('***')
-
-/*
-    for (let i = 0; i < questionSeeds.length; i++) {
-      await Question.create(questionSeeds[i]);
-      console.log('   ')
-      console.log('***')
-      console.log('i ', i)
-      console.log(questionSeeds[i])
-      console.log('***')
-    }
-*/
   } catch (err) {
     console.error(err);
     process.exit(1);
