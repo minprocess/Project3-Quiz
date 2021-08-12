@@ -32,7 +32,8 @@ const QuestionList = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("hello world")
+    console.log("respState")
+    console.log(respState)
     /*
     try {
 
@@ -50,14 +51,13 @@ const QuestionList = (props) => {
     console.log("handleChange name", value)
     //if (name === 'thoughtText' && value.length <= 280) {
       
-    /*
-      setRespState(value);
-      if (name === 'resp0')
-        respValue[0]
 
-      setCharacterCount(value.length);
-      */
-    //}
+      setRespState({
+        ...respState, 
+        [name]: value,
+      });
+
+      console.log("handleChange respState", respState)
   };
 
   return (
@@ -67,7 +67,7 @@ const QuestionList = (props) => {
           <li key={question.number}>
             <span style={myStyle}>
               {question.left}
-              <input type="text" name={question.respName} value={respState.resp0} onChange={handleChange}/>
+              <input type="text" name={question.respName} value={respState.value} onChange={handleChange}/>
               {question.right}
             </span>
           </li>
