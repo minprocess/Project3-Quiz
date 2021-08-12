@@ -24,6 +24,9 @@ export const QUERY_QUESTIONS = gql`
   query getQuestions {
     questions {
       number
+      left
+      right
+      choices
     }
   }
 `;
@@ -31,7 +34,6 @@ export const QUERY_QUESTIONS = gql`
 export const QUERY_QUESTIONS2 = gql`
   query getQuestions {
     questions {
-      _id
       number
       questionType
       left
