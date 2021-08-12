@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -13,6 +13,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Quiz from './pages/Quiz';
+import Results from './pages/Results';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -41,6 +42,16 @@ const client = new ApolloClient({
 });
 
 function App() {
+
+  const [respState, setRespState] = useState({
+    resp0: '',
+    resp1: '',
+    resp2: '',
+    resp3: '',
+    resp4: '',
+  });
+
+
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -63,7 +74,10 @@ function App() {
               <Profile />
             </Route>
             <Route exact path="/quiz">
-              <Quiz />
+              <Quiz respState={respState} setRespState={setRespState}/>
+            </Route>
+            <Route exact path="/results">
+              <Results respState={respState} questions={{}}/>
             </Route>
           </div>
           <Footer />

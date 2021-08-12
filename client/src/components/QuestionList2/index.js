@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 
 const QuestionList = (props) => {
@@ -6,6 +6,16 @@ const QuestionList = (props) => {
   console.log(props)
 
   const myStyle = {display: "inline; !important"}
+
+  const [respState, setRespState] = useState({
+    resp0: '',
+    resp1: '',
+    resp2: '',
+    resp3: '',
+    resp4: '',
+  });
+
+
 
   /*
    <select name="chocolates" id="chocolates">
@@ -23,7 +33,7 @@ const QuestionList = (props) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("respState")
-    console.log(props.respState)
+    console.log(respState)
     /*
     try {
 
@@ -42,31 +52,25 @@ const QuestionList = (props) => {
     //if (name === 'thoughtText' && value.length <= 280) {
       
 
-      props.setRespState({
-        ...props.respState, 
+      setRespState({
+        ...respState, 
         [name]: value,
       });
 
-      console.log("handleChange respState", props.respState)
+      console.log("handleChange respState", respState)
   };
 
   return (
     <>
-      <ul>
+      <thead><tr><th>Initials</th><th>Score</th><th>Correct answers</th></tr></thead>
         {props && props.questions.map((question) => (
-          <li key={question.number}>
-            <span className="pt-1" style={myStyle}>
-              {question.left}
-              <input type="text" name={question.respName} value={props.respState.value} onChange={handleChange}/>
-              {question.right}
-            </span><p>{question.translation}</p><p>{question.hint}</p>
-          </li>
+
+        <tr> <td>{question.left}</td> <td><input type="test"/></td> <td>{question.right}</td> </tr>
           ))}
-      </ul>
       <div className="col-12 col-lg-3">
-        <Link className="btn btn-primary btn-block py-3" to="/results">
+        <button className="btn btn-primary btn-block py-3" onClick={handleSubmit}>
           Submit
-        </Link>
+        </button>
       </div>
     </>
   );

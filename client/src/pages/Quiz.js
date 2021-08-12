@@ -5,7 +5,7 @@ import QuestionList from '../components/QuestionList';
 
 import { QUERY_QUESTIONS } from '../utils/queries';
 
-const Quiz = () => {
+const Quiz = ({respState, setRespState}) => {
 
   const { loading, data } = useQuery(QUERY_QUESTIONS);
   const questions = data?.questions || [];
@@ -36,6 +36,8 @@ const Quiz = () => {
             <div>Loading...</div>
           ) : (
             <QuestionList
+              respState={respState}
+              setRespState={setRespState}
               questions={quests}
             />
           )}
