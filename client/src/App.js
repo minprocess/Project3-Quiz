@@ -51,6 +51,8 @@ function App() {
     resp4: '',
   });
 
+  const [displayQuestions, setDisplayQuestions] = useState([]);
+
 
   return (
     <ApolloProvider client={client}>
@@ -74,10 +76,13 @@ function App() {
               <Profile />
             </Route>
             <Route exact path="/quiz">
-              <Quiz respState={respState} setRespState={setRespState}/>
+              <Quiz respState={respState} 
+                setRespState={setRespState} 
+                displayQuestions={displayQuestions}
+                setDisplayQuestions={setDisplayQuestions}/>
             </Route>
             <Route exact path="/results">
-              <Results respState={respState} questions={{}}/>
+              <Results respState={respState} displayQuestions={displayQuestions}/>
             </Route>
           </div>
           <Footer />

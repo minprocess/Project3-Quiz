@@ -1,6 +1,9 @@
 import React from 'react';
 
 const Results = (props) => {
+
+  console.log(props.displayQuestions);
+  console.log(props.respState);
   
   return (
     <main>

@@ -1,33 +1,76 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 import { useQuery } from '@apollo/client';
 
 import QuestionList from '../components/QuestionList';
 
 import { QUERY_QUESTIONS } from '../utils/queries';
 
-const Quiz = ({respState, setRespState}) => {
+const Quiz = ({respState, setRespState, displayQuestions, setDisplayQuestions}) => {
 
   const { loading, data } = useQuery(QUERY_QUESTIONS);
-  const questions = data?.questions || [];
+  
   console.log("Quiz.js loading", loading)
-  console.log("Quiz.js questions.length", questions.length)
+  // console.log("Quiz.js questions.length", data.questions.length)
 
-  let quests = []
-  quests.push(questions[0])
-  quests.push(questions[1])
-  quests.push(questions[2])
-  quests.push(questions[3])
-  quests.push(questions[4])
+  useEffect(() => {
+    if (loading) return;
 
+    const level = "ADVANCED";
   
-  quests[0] = {...quests[0], respName: "resp0", respVal: ""}
-  quests[1] = {...quests[1], respName: "resp1", respVal: ""}
-  quests[2] = {...quests[2], respName: "resp2", respVal: ""}
-  quests[3] = {...quests[3], respName: "resp3", respVal: ""}
-  quests[4] = {...quests[4], respName: "resp4", respVal: ""}
+    if (level === "ADVANCED") {
+      // level = "A2";
+      // set questions to 5 random level A2 questions
   
-  console.log("in Quiz.js quests")
-  console.log(quests)
+      // questions has all qustions including A1 and A2
+      // go through the list and find the A2 questions and pick 5 random A2 questions
+      // and put the questions into displayQuestions
+      
+      let filteredQuestions = data.questions.filter((question) => {
+        if (question.level === "A2") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+  
+      setDisplayQuestions([
+        {...filteredQuestions[0], respName: "resp0"},
+        {...filteredQuestions[1], respName: "resp1"},
+        {...filteredQuestions[2], respName: "resp2"},
+        {...filteredQuestions[3], respName: "resp3"},
+        {...filteredQuestions[4], respName: "resp4"}
+      ]);
+  
+      console.log("in Quiz.js quests")
+      console.log(data.questions);
+  
+    } else { // "BEGINNER"
+      // level = "A1";
+      // set questions to 5 random level A1 questions
+  
+      // questions has all qustions including A1 and A2
+      // go through the list and find the A1 questions and pick 5 random A1 questions
+      // and put the questions into displayQuestions
+  
+      let filteredQuestions = data.questions.filter((question) => {
+        if (question.level === "A1") {
+          return true;
+        } else {
+          return false;
+        }
+      });
+  
+      setDisplayQuestions([
+        {...filteredQuestions[0], respName: "resp0"},
+        {...filteredQuestions[1], respName: "resp1"},
+        {...filteredQuestions[2], respName: "resp2"},
+        {...filteredQuestions[3], respName: "resp3"},
+        {...filteredQuestions[4], respName: "resp4"}
+      ]);
+    }
+  }, [loading, setDisplayQuestions]);
+ 
+
   return (
     <main>
       <div className="flex-row justify-center">
@@ -38,7 +81,7 @@ const Quiz = ({respState, setRespState}) => {
             <QuestionList
               respState={respState}
               setRespState={setRespState}
-              questions={quests}
+              questions={displayQuestions}
             />
           )}
         </div>

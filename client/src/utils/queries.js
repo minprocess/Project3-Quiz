@@ -29,6 +29,7 @@ export const QUERY_QUESTIONS = gql`
       choices
       translation
       hint
+      level
     }
   }
 `;

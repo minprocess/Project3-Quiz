@@ -53,13 +53,28 @@ const QuestionList = (props) => {
   return (
     <>
       <ul>
-        {props && props.questions.map((question) => (
+        {props && props.questions && props.questions.map((question) => (
           <li key={question.number}>
             <span className="pt-1" style={myStyle}>
               {question.left}
-              <input type="text" name={question.respName} value={props.respState.value} onChange={handleChange}/>
+              {question.choices.length ? (
+                <select name={question.ansName} onChange={handleChange}>
+                <option value="">select...</option>
+              {question.choices.map((choice) => {
+                return(
+                  <option value={choice}>
+                    {choice}
+                  </option>
+                )
+              })}
+              </select>
+
+              ) : 
+              (
+                <input type="text" name={question.ansName}  onChange={handleChange}/>
+              )}
               {question.right}
-            </span><p>{question.translation}</p><p>{question.hint}</p>
+            </span>
           </li>
           ))}
       </ul>
