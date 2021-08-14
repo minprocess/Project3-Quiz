@@ -17,6 +17,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "mongoose-random": "^0.1.1"
   }
 }
