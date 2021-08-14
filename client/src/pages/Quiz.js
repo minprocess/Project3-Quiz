@@ -3,73 +3,30 @@ import { useQuery } from '@apollo/client';
 
 import QuestionList from '../components/QuestionList';
 
-import { QUERY_QUESTIONS } from '../utils/queries';
+import { QUERY_QUESTIONS, QUERY_ME } from '../utils/queries';
 
-const Quiz = ({respState, setRespState, displayQuestions, setDisplayQuestions}) => {
+const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
+  const { data: userData } = useQuery(QUERY_ME);
+  console.log("\n\nuserData queryme Quiz.js")
+  console.log(userData?.me)
 
-  const { loading, data } = useQuery(QUERY_QUESTIONS);
+  const { loading, data } = useQuery(QUERY_QUESTIONS, {variables: {limit: 5, level: userData?.me?.level || "A1"}});
   
   console.log("Quiz.js loading", loading)
   // console.log("Quiz.js questions.length", data.questions.length)
 
   useEffect(() => {
-    if (loading) return;
-
-    const level = "ADVANCED";
-  
-    if (level === "ADVANCED") {
-      // level = "A2";
-      // set questions to 5 random level A2 questions
-  
-      // questions has all qustions including A1 and A2
-      // go through the list and find the A2 questions and pick 5 random A2 questions
-      // and put the questions into displayQuestions
-      
-      let filteredQuestions = data.questions.filter((question) => {
-        if (question.level === "A2") {
-          return true;
-        } else {
-          return false;
-        }
-      });
-  
-      setDisplayQuestions([
-        {...filteredQuestions[0], respName: "resp0"},
-        {...filteredQuestions[1], respName: "resp1"},
-        {...filteredQuestions[2], respName: "resp2"},
-        {...filteredQuestions[3], respName: "resp3"},
-        {...filteredQuestions[4], respName: "resp4"}
-      ]);
-  
-      console.log("in Quiz.js quests")
-      console.log(data.questions);
-  
-    } else { // "BEGINNER"
-      // level = "A1";
-      // set questions to 5 random level A1 questions
-  
-      // questions has all qustions including A1 and A2
-      // go through the list and find the A1 questions and pick 5 random A1 questions
-      // and put the questions into displayQuestions
-  
-      let filteredQuestions = data.questions.filter((question) => {
-        if (question.level === "A1") {
-          return true;
-        } else {
-          return false;
-        }
-      });
-  
-      setDisplayQuestions([
-        {...filteredQuestions[0], respName: "resp0"},
-        {...filteredQuestions[1], respName: "resp1"},
-        {...filteredQuestions[2], respName: "resp2"},
-        {...filteredQuestions[3], respName: "resp3"},
-        {...filteredQuestions[4], respName: "resp4"}
-      ]);
+    console.log(data?.questions)
+    if (userData && data) {
+      console.log("in if(userData) UseEffect")
+      setDisplayQuestions(data.questions)
     }
-  }, [loading, setDisplayQuestions]);
- 
+    else {
+      console.log("in else UseEffect")
+      setDisplayQuestions([])
+    }
+  }, [data?.questions]);
+
 
   return (
     <main>
@@ -79,9 +36,9 @@ const Quiz = ({respState, setRespState, displayQuestions, setDisplayQuestions}) 
             <div>Loading...</div>
           ) : (
             <QuestionList
-              respState={respState}
-              setRespState={setRespState}
-              questions={displayQuestions}
+              answers={answers}
+              setAnswers={setAnswers}
+              displayQuestions={displayQuestions}
             />
           )}
         </div>

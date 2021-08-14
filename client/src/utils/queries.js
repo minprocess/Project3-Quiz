@@ -1,47 +1,25 @@
 import { gql } from '@apollo/client';
 
-/*
-  type Query {
-    users: [User]
-    user(username: String!): User
-    me: User
-    questions: [Question]
-    question(number: Int): Question
-  }
-*/
-
 export const QUERY_USER = gql`
   query user($username: String!) {
     user(username: $username) {
       _id
       username
       email
+      level
     }
   }
 `;
 
 export const QUERY_QUESTIONS = gql`
-  query getQuestions {
-    questions {
+  query getQuestions($level: String, $limit: Int) {
+    questions(level: $level, limit: $limit) {
       number
       left
       right
       choices
       translation
       hint
-      level
-    }
-  }
-`;
-
-export const QUERY_QUESTIONS2 = gql`
-  query getQuestions {
-    questions {
-      number
-      questionType
-      left
-      choices
-      right
       answer
       learningLink
       level
@@ -55,6 +33,7 @@ export const QUERY_ME = gql`
       _id
       username
       email
+      level
     }
   }
 `;

@@ -6,10 +6,11 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    level: String
   }
 
   type Question {
-    number: Int
+    number: String
     questionType: String
     left: String
     choices: [String]
@@ -28,9 +29,7 @@ const typeDefs = gql`
 
   type Query {
     me: User
-    questions: [Question]
-    questions2(limit: Int, level: String): [Question]
-    question(number: Int, level: String!): Question
+    questions(limit: Int, level: String): [Question]
   }
   
   type Mutation {

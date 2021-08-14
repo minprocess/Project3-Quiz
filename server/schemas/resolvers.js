@@ -5,11 +5,9 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     questions: async (parent, { limit, level }) => {
-      const quest = await Question.find()
-      return quest
-//      return Question.findRandom().limit(limit)
+      return await Question.findRandom({level}).limit(limit).exec()
     },
-    me: async (parent, context) => {
+    me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
       }
@@ -17,11 +15,6 @@ const resolvers = {
     },
 
   },
-/*
-    me: User
-    questions(limit: Int!, level: String!): [Question]
-    question(number: Int, level: String!): Question
-*/
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });

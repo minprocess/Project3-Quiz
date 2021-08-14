@@ -1,6 +1,6 @@
 [
 {
-    "number": 1,
+    "number": "1",
     "questionType": "",
     "left": "Vous le ",
     "choices": ["dépeinez", "dépeindez", "dépeignez"],
@@ -12,7 +12,7 @@
     "level": "A2"
   },
   {
-    "number": 2,
+    "number": "2",
     "questionType": "",
     "left": "Elle a une ",
     "choices": ["vigntaine de", "vingt", "vingtaine"],
@@ -24,7 +24,7 @@
     "level": "A2"
   },
   {
-    "number": 3,
+    "number": "3",
     "questionType": "",
     "left": "How could you say: 'I have faith in something else.'? ",
     "choices": ["J'ai foi en quelque chose d'autre.", "J'ai foi en une chose autre.", "J'ai foi en quelque chose autre."],
@@ -36,7 +36,7 @@
     "level": "A2"
   },
   {
-    "number": 4,
+    "number": "4",
     "questionType": "",
     "left": "Nous ",
     "choices": [],
@@ -48,7 +48,7 @@
     "level": "A2"
   },
   {
-    "number": 5,
+    "number": "5",
     "questionType": "",
     "left": "Nous avons ",
     "choices": [],
@@ -60,7 +60,7 @@
     "level": "A2"
   },
   {
-    "number": 6,
+    "number": "6",
     "questionType": "",
     "left": "Nous ",
     "choices": ["recevons", "recevoyons", "reçons"],
@@ -72,7 +72,7 @@
     "level": "A2"
   },
   {
-    "number": 7,
+    "number": "7",
     "questionType": "",
     "left": "Marc attend ", 
     "choices": ["patiemment", "patiement", "patient"],
@@ -84,7 +84,7 @@
     "level": "A2"
   },
   {
-    "number": 8,
+    "number": "8",
     "questionType": "",
     "left": "Rearrange the words in this statement to turn it into a question. «Vous vous levez»",
     "choices": [],
@@ -96,7 +96,7 @@
     "level": "A2"
   },
   {
-    "number": 9,
+    "number": "9",
     "questionType": "",
     "left": "Ma tante conduit ",
     "choices": ["aussi doucement de", "comme doucement comme", "aussi doucemente que"],
@@ -108,7 +108,7 @@
     "level": "A2"
   },
   {
-    "number": 10,
+    "number": "10",
     "questionType": "",
     "left": "Write 'He is not tall enough.': Il ",
     "choices": ["n'est pas grand assez", "est pas assez grand", "n'est pas assez grand"],
@@ -120,7 +120,7 @@
     "level": "A2"
   },
   {
-    "number": 11,
+    "number": "11",
     "questionType": "",
     "left": "What is the meaning of 'Non, pas lui!'? ",
     "choices": ["No, not him!", "No, not them!", "No, not her!"],
@@ -132,7 +132,7 @@
     "level": "A1"
     },
     {
-    "number": 12,
+    "number": "12",
     "questionType": "",
     "left": "<<Jean n'aime pas Marcel. Moi non plus>> means ",
     "choices": ["Jean doesn't like Marcel. I don't any more", "Jean doesn't like Marcel. Neither do I", "Jean doesn't like Marcel. But I do"],
@@ -144,7 +144,7 @@
     "level": "A1"
     },
     {
-    "number": 13,
+    "number": "13",
     "questionType": "",
     "left": "",
     "choices": [],
@@ -156,7 +156,7 @@
     "level": "A1"
     },
     {
-    "number": 14,
+    "number": "14",
     "questionType": "",
     "left": "J'ai ",
     "choices": [],
@@ -168,7 +168,7 @@
     "level": "A1"
     },
     {
-    "number": 15,
+    "number": "15",
     "questionType": "",
     "left": "",
     "choices": [],
@@ -180,7 +180,7 @@
     "level": "A1"
     },
     {
-    "number": 16,
+    "number": "16",
     "questionType": "",
     "left": "Vous ",
     "choices": [],
@@ -192,7 +192,7 @@
     "level": "A1"
     },
     {
-    "number": 17,
+    "number": "17",
     "questionType": "",
     "left": "How would you best say 'I'll come in five minutes.'? ",
     "choices": ["J'arriverai dans cinq minutes.", "J'arrivais dans cinq minutes.", "J'arrive dans cinq minutes."],
@@ -204,7 +204,7 @@
     "level": "A1"
     },
     {
-    "number": 18,
+    "number": "18",
     "questionType": "",
     "left": "<<Je ne vais jamais à Londres>> means ",
     "choices": ["I don't go to London", "I never go to London", "I don't go to London any more"],
@@ -216,7 +216,7 @@
     "level": "A1"
     },
     {
-    "number": 19,
+    "number": "19",
     "questionType": "",
     "left": "Oui, ",
     "choices": [],
@@ -228,7 +228,7 @@
     "level": "A1"
     },
     {
-    "number": 20,
+    "number": "20",
     "questionType": "",
     "left": "How would you say: 'They think he's lazy.'? ", 
     "choices": ["Ils pensent qu'est paresseux", "Ils pensent qu'il est paresseux", "Ils pensent il est paresseux"],

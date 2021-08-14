@@ -4,7 +4,7 @@ const Results = (props) => {
 
   console.log(props.displayQuestions);
   console.log(props.respState);
-  
+
   return (
     <main>
       <div className="flex-row justify-center">
@@ -12,7 +12,7 @@ const Results = (props) => {
          Results
 
          Based on the responses:
-         Response 0: {props.respState["resp0"]}
+         An 0: {props.respState["resp0"]}
          Response 1: {props.respState["resp1"]}
          Response 2: {props.respState["resp2"]}
          Response 3: {props.respState["resp3"]}

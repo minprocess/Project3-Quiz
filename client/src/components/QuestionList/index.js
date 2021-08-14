@@ -1,29 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const QuestionList = (props) => {
-  console.log("QuestionList props")
-  console.log(props)
-
+const QuestionList = ({answers, setAnswers, displayQuestions}) => {
   const myStyle = {display: "inline; !important"}
 
-  /*
-   <select name="chocolates" id="chocolates">
-        <option value="choose one">Choose One</option>
-        <option value="maltesers">Maltesers</option>
-        <option value="mars">Mars</option>
-        <option value="bounty">Bounty</option>
-        <option value="kitkat">Kitkat</option> </select
+/*
+const currentQuestions = useRef([])
 
-      >
-  */
-
-  // {question.choices.length} ? () : ()
+(displayQuestions.current || []).map
+*/
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("respState")
-    console.log(props.respState)
+    console.log("answers")
+    console.log(answers)
     /*
     try {
 
@@ -35,43 +25,39 @@ const QuestionList = (props) => {
   };
 
   const handleChange = (event) => {
-    
     const { name, value } = event.target;
-    console.log("handleChange name", name)
-    console.log("handleChange name", value)
-    //if (name === 'thoughtText' && value.length <= 280) {
-      
-
-      props.setRespState({
-        ...props.respState, 
+    //console.log("handleChange name", name)
+    //console.log("handleChange name", value)
+      setAnswers({
+        ...answers, 
         [name]: value,
       });
 
-      console.log("handleChange respState", props.respState)
+      console.log("handleChange answers", answers)
   };
-
+  console.log("\n\ndisplayQuestion")
+  console.log(displayQuestions)
   return (
     <>
       <ul>
-        {props && props.questions && props.questions.map((question) => (
+        { (displayQuestions || []).map((question) => (
           <li key={question.number}>
-            <span className="pt-1" style={myStyle}>
+            <span className="pt-2" style={myStyle}>
               {question.left}
               {question.choices.length ? (
-                <select name={question.ansName} onChange={handleChange}>
-                <option value="">select...</option>
-              {question.choices.map((choice) => {
-                return(
-                  <option value={choice}>
-                    {choice}
-                  </option>
-                )
-              })}
-              </select>
-
+                <select name={question.number} onChange={handleChange}>
+                  <option value="">select...</option>
+                  {question.choices.map((choice) => {
+                    return(
+                      <option value={choice}>
+                        {choice}
+                      </option>
+                    )
+                  })}
+                </select>
               ) : 
               (
-                <input type="text" name={question.ansName}  onChange={handleChange}/>
+                <input type="text" name={question.number}  onChange={handleChange}/>
               )}
               {question.right}
             </span>

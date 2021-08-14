@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -43,17 +43,14 @@ const client = new ApolloClient({
 
 function App() {
 
-  const [respState, setRespState] = useState({
-    resp0: '',
-    resp1: '',
-    resp2: '',
-    resp3: '',
-    resp4: '',
-  });
+  // resp is user response. That is the answer to a question
+  // The component QuestionList is repsonsible for displaying the questions and get the answers
+  const [answers, setAnswers] = useState([]);
 
+  // The Quiz page is responsible for creating the displayQuestions
+  // The Quiz page is one of the routes
   const [displayQuestions, setDisplayQuestions] = useState([]);
-
-
+  //const displayQuestions = useRef([]);
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -76,13 +73,13 @@ function App() {
               <Profile />
             </Route>
             <Route exact path="/quiz">
-              <Quiz respState={respState} 
-                setRespState={setRespState} 
+              <Quiz answers={answers} 
+                setAnswers={setAnswers} 
                 displayQuestions={displayQuestions}
-                setDisplayQuestions={setDisplayQuestions}/>
+                setDisplayQuestions = {setDisplayQuestions}/>
             </Route>
             <Route exact path="/results">
-              <Results respState={respState} displayQuestions={displayQuestions}/>
+              <Results answers={answers} displayQuestions={displayQuestions}/>
             </Route>
           </div>
           <Footer />
