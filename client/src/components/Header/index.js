@@ -15,7 +15,7 @@ const Header = () => {
           <Link className="text-light" to="/">
             <h1 className="m-0">Quizzler</h1>
           </Link>
-          <p className="m-0">Take a quiz testing your knowledge of French languact vocabulary and grammar.</p>
+          <p className="m-0">Take a quiz testing your knowledge of French language vocabulary and grammar.</p>
         </div>
         <div>
           {Auth.loggedIn() ? (

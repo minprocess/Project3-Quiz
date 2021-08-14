@@ -6,7 +6,7 @@ const StartForm = () => {
   return (
     <div>
       {Auth.loggedIn() ? (
-        <Link to="/quiz">Quiz</Link>
+        <Link to="/quiz">French language quiz</Link>
       ) : (
         <p>
         You need to be logged in to take a quiz. Please{' '}
