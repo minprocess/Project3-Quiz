@@ -16,6 +16,15 @@ const resolvers = {
 
   },
   Mutation: {
+    updateUserLevel: async (parent, {id, correct, incorrect, unanswered}) => {
+      const user = await User.findOneAndUpdate(
+        { _id: id },
+        { $set: { correct: correct, incorrect: incorrect, unanswered: unanswered } },
+        { new: true }
+      )
+      const token = signToken(user);
+      return { token, user }
+    },
 
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });

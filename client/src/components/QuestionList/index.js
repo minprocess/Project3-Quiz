@@ -1,45 +1,35 @@
-import React, { useState } from 'react';
+/*
+  This routine presents the questions to the user then puts the user's
+  answers in the prop answers
+*/
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const QuestionList = ({answers, setAnswers, displayQuestions}) => {
   const myStyle = {display: "inline; !important"}
+  console.log("\n\n ***** Enter Question List **********")
 
-/*
-const currentQuestions = useRef([])
-
-(displayQuestions.current || []).map
-*/
-
+  // handleSubmit doesn't have anything to do, apparently
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     console.log("answers")
     console.log(answers)
-    /*
-    try {
-
-      setResponse('');
-    } catch (err) {
-      console.error(err);
-    }
-    */
+    console.log("***** Leave Question List **********\n")
   };
 
+  // Save the characters that the user types in or clicks in the dropdowns
   const handleChange = (event) => {
     const { name, value } = event.target;
-    //console.log("handleChange name", name)
-    //console.log("handleChange name", value)
-      setAnswers({
-        ...answers, 
-        [name]: value,
-      });
-
-      console.log("handleChange answers", answers)
+    setAnswers({
+      ...answers, 
+      [name]: value,
+    });
   };
-  console.log("\n\ndisplayQuestion")
-  console.log(displayQuestions)
+
   return (
     <>
-      <ul>
+      <ol>
         { (displayQuestions || []).map((question) => (
           <li key={question.number}>
             <span className="pt-2" style={myStyle}>
@@ -61,9 +51,21 @@ const currentQuestions = useRef([])
               )}
               {question.right}
             </span>
+            {question.translation.length > 0 &&
+              <div>
+                <br></br>
+                {question.translation}
+              </div>
+            }
+            {question.hint.length > 0 &&
+              <div>
+                <br></br>
+                {question.hint}
+              </div>
+            }
           </li>
           ))}
-      </ul>
+      </ol>
       <div className="col-12 col-lg-3">
         <Link className="btn btn-primary btn-block py-3" to="/results">
           Submit

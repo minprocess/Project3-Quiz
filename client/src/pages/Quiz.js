@@ -7,22 +7,22 @@ import { QUERY_QUESTIONS, QUERY_ME } from '../utils/queries';
 
 const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
   const { data: userData } = useQuery(QUERY_ME);
-  console.log("\n\nuserData queryme Quiz.js")
-  console.log(userData?.me)
+  //console.log("\n\nuserData queryme Quiz.js")
+  //console.log(userData?.me)
 
   const { loading, data } = useQuery(QUERY_QUESTIONS, {variables: {limit: 5, level: userData?.me?.level || "A1"}});
   
-  console.log("Quiz.js loading", loading)
+  //console.log("Quiz.js loading", loading)
   // console.log("Quiz.js questions.length", data.questions.length)
 
   useEffect(() => {
-    console.log(data?.questions)
+    //console.log(data?.questions)
     if (userData && data) {
-      console.log("in if(userData) UseEffect")
+      //console.log("in if(userData) UseEffect")
       setDisplayQuestions(data.questions)
     }
     else {
-      console.log("in else UseEffect")
+      //console.log("in else UseEffect")
       setDisplayQuestions([])
     }
   }, [data?.questions]);

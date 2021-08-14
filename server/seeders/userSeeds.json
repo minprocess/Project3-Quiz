@@ -3,13 +3,19 @@
     "username": "Lernantino",
     "email": "lernantino@techfriends.dev",
     "password": "password10",
-    "level" : "A2"
+    "level" : "A2",
+    "correct" : 0,
+    "incorrect" : 0,
+    "unanswered" : 0
   },
   {
     "username": "WTP",
     "email": "wtp@hotmail.com",
     "password": "asdfasdf",
-    "level" : "A1"
+    "level" : "A1",
+    "correct" : 0,
+    "incorrect" : 0,
+    "unanswered" : 0
   }
 
 ]
