@@ -27,16 +27,16 @@ export const ADD_USER = gql`
 //updateUserLevel(id: ID!, correct: Int, incorrect: Int, unanswered: Int): Auth
 
 export const UPDATE_USER_LEVEL = gql`
-  mutation updateUswerLevel($id: ID!, $correct: Int, $incorrect: String, $unanswered: Int) {
-    updateUserLevel(id: $id, correct: $correct, incorrect: $incorrect, unanswered:$unanswered)
-      token
-      user {
-        _id
-        username
-        correct
-        incorrect
-        unanswered
-      }
+  mutation updateUserLevel($id: ID!, $correct: Int, $incorrect: Int, $unanswered: Int) {
+    updateUserLevel(id: $id, correct: $correct, incorrect: $incorrect, unanswered: $unanswered)
+    {
+      _id
+      username
+      email
+      level
+      correct
+      incorrect
+      unanswered
     }
   }
 `;

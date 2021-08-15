@@ -44,11 +44,9 @@ const resolvers = {
     updateUserLevel: async (parent, {id, correct, incorrect, unanswered}) => {
       const user = await User.findOneAndUpdate(
         { _id: id },
-        { $set: { correct: correct, incorrect: incorrect, unanswered: unanswered } },
-        { new: true }
+        { $set: { correct: correct, incorrect: incorrect, unanswered: unanswered } }
       )
-      const token = signToken(user);
-      return { token, user }
+      return user
     },
   },
 };
