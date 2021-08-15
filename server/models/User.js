@@ -22,6 +22,15 @@ const userSchema = new Schema({
   level: {
     type: String,
     required: true,
+  },
+  correct: {
+    type: Number,
+  },
+  incorrect: {
+    type: Number,
+  },
+  unanswered: {
+    type: Number,
   }
 });
 
