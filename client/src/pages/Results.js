@@ -1,26 +1,47 @@
 import React from 'react';
+import { useMutation } from '@apollo/client';
+import { UPDATE_USER_LEVEL } from '../utils/mutations';
 
 const Results = ({answers, displayQuestions}) => {
 
   //console.log(props.displayQuestions);
   //console.log(props.answers);
-
-
 /*
-let quests = displayQuestions;
-// console.log ("results page")
-for (let i=0; i<quests.length; i++) {
-  for (var j in answers){
-    //console.log("j", j, "dispQuest.num", displayQuestions[i].number)
-    if (j === quests[i].number) {
-      quests[i].userAnswer = answers[j]
-      console.log("i answer", i, answers[j])
-      //console.log(displayQuestions[i].number, displayQuestions[i].left, answers[j], displayQuestions[i].right)
+  let corr = correct;
+  let incorr = incorrect;
+  let unans = 0;
+
+  if (displayQuestions.length > 0)
+  {
+    for (let i=0; i<displayQuestions.length; i++) {
+      if (answers[displayQuestions[i].number].length > 0) {
+        if (answers[displayQuestions[i].number] == displayQuestions[i].answer) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+      }
+      else {
+        unanswered++;         
+      }
     }
+
+    //     updateUserLevel($id: $id, correct: $correct, incorrect: $incorrect, unanswered:$unanswered)
+    const { data } = useMutation(UPDATE_USER_LEVEL, {
+      variables: {
+        id: _id,
+        correct: correct,
+        incorrect: incorrect,
+        unanswered: unanswered
+      }
+    });
+  
   }
-}
-console.log ("************* end of for let i")
+
 */
+
+  //console.log("correct= ", correct, "  incorrect= ", incorrect, "  unanswered= ", unanswered )
+
   return (
 
       <div className="flex-row justify-center">

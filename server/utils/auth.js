@@ -1,4 +1,6 @@
 const jwt = require('jsonwebtoken');
+
+// Enable access to .env variables
 require('dotenv').config();
 
 const secret = process.env.apple;

@@ -16,15 +16,6 @@ const resolvers = {
 
   },
   Mutation: {
-    updateUserLevel: async (parent, {id, correct, incorrect, unanswered}) => {
-      const user = await User.findOneAndUpdate(
-        { _id: id },
-        { $set: { correct: correct, incorrect: incorrect, unanswered: unanswered } },
-        { new: true }
-      )
-      const token = signToken(user);
-      return { token, user }
-    },
 
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
@@ -32,6 +23,8 @@ const resolvers = {
       return { token, user };
     },
     login: async (parent, { email, password }) => {
+      console.log("login")
+      console.log(email, password)
       const user = await User.findOne({ email });
 
       if (!user) {
@@ -47,6 +40,15 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    updateUserLevel: async (parent, {id, correct, incorrect, unanswered}) => {
+      const user = await User.findOneAndUpdate(
+        { _id: id },
+        { $set: { correct: correct, incorrect: incorrect, unanswered: unanswered } },
+        { new: true }
+      )
+      const token = signToken(user);
+      return { token, user }
     },
   },
 };

@@ -7,6 +7,10 @@ export const QUERY_USER = gql`
       username
       email
       level
+      correct
+      incorrect
+      unanswered
+
     }
   }
 `;
@@ -34,6 +38,9 @@ export const QUERY_ME = gql`
       username
       email
       level
+      correct
+      incorrect
+      unanswered
     }
   }
 `;

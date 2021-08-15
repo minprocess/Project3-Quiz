@@ -30,6 +30,7 @@ const Login = (props) => {
 
       Auth.login(data.login.token);
     } catch (e) {
+      console.log("login page error")
       console.error(e);
     }
 

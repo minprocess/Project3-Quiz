@@ -9,6 +9,7 @@ const QuestionList = ({answers, setAnswers, displayQuestions}) => {
   const myStyle = {display: "inline; !important"}
   console.log("\n\n ***** Enter Question List **********")
 
+/*
   // handleSubmit doesn't have anything to do, apparently
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -17,7 +18,7 @@ const QuestionList = ({answers, setAnswers, displayQuestions}) => {
     console.log(answers)
     console.log("***** Leave Question List **********\n")
   };
-
+*/
   // Save the characters that the user types in or clicks in the dropdowns
   const handleChange = (event) => {
     const { name, value } = event.target;

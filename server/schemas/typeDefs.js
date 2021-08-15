@@ -7,6 +7,9 @@ const typeDefs = gql`
     email: String
     password: String
     level: String
+    correct: Int
+    incorrect: Int
+    unanswered: Int
   }
 
   type Question {
@@ -33,10 +36,9 @@ const typeDefs = gql`
   }
   
   type Mutation {
-    updateUserLevel(id: ID!, correct: Int, incorrect: Int, unanswered: Int): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-
+    updateUserLevel(id: ID!, correct: Int, incorrect: Int, unanswered: Int): Auth
   }
 `;
 
