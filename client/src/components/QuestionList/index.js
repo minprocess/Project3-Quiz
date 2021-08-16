@@ -3,22 +3,12 @@
   answers in the prop answers
 */
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-const QuestionList = ({answers, setAnswers, displayQuestions}) => {
+const QuestionList = ({handleFormSubmit, answers, setAnswers, displayQuestions}) => {
   const myStyle = {display: "inline; !important"}
-  console.log("\n\n ***** Enter Question List **********")
+  const history = useHistory()
 
-/*
-  // handleSubmit doesn't have anything to do, apparently
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    console.log("answers")
-    console.log(answers)
-    console.log("***** Leave Question List **********\n")
-  };
-*/
   // Save the characters that the user types in or clicks in the dropdowns
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -27,6 +17,12 @@ const QuestionList = ({answers, setAnswers, displayQuestions}) => {
       [name]: value,
     });
   };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    await handleFormSubmit();
+    history.push("/results")
+  }
 
   return (
     <>
@@ -68,9 +64,9 @@ const QuestionList = ({answers, setAnswers, displayQuestions}) => {
           ))}
       </ol>
       <div className="col-12 col-lg-3">
-        <Link className="btn btn-primary btn-block py-3" to="/results">
+        <button className="btn btn-primary btn-block py-3" onClick={handleSubmit}>
           Submit
-        </Link>
+        </button>
       </div>
     </>
   );

@@ -44,7 +44,7 @@ const resolvers = {
     updateUserLevel: async (parent, {id, correct, incorrect, unanswered}) => {
       const user = await User.findOneAndUpdate(
         { _id: id },
-        { $set: { correct: correct, incorrect: incorrect, unanswered: unanswered } }
+        { correct: correct, incorrect: incorrect, unanswered: unanswered }
       )
       return user
     },

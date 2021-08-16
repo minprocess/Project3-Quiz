@@ -1,9 +1,10 @@
 import React, { useEffect }  from 'react';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 
 import QuestionList from '../components/QuestionList';
 
 import { QUERY_QUESTIONS, QUERY_ME } from '../utils/queries';
+import { UPDATE_USER_LEVEL } from '../utils/mutations';
 
 const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
   const { data: userData } = useQuery(QUERY_ME);
@@ -14,6 +15,39 @@ const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
   
   //console.log("Quiz.js loading", loading)
   // console.log("Quiz.js questions.length", data.questions.length)
+  const [updateUser] = useMutation(UPDATE_USER_LEVEL);
+
+  const handleFormSubmit = async () => {
+    let correct = userData.me.correct;
+    let incorrect = userData.me.incorrect;
+    let unanswered = userData.me.unanswered;
+    for (let i=0; i<displayQuestions.length; i++) {
+      if (answers[displayQuestions[i].number].length > 0) {
+        if (answers[displayQuestions[i].number] === displayQuestions[i].answer) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+      }
+      else {
+        unanswered++;         
+      }
+    }
+    console.log("corr, incorr, unans", correct, incorrect, unanswered)
+    try {
+      const { data } = await updateUser({
+        variables: {
+          id: userData.me._id,
+          correct,
+          incorrect,
+          unanswered,
+        },
+      });
+
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   useEffect(() => {
     //console.log(data?.questions)
@@ -36,6 +70,7 @@ const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
             <div>Loading...</div>
           ) : (
             <QuestionList
+              handleFormSubmit={handleFormSubmit}
               answers={answers}
               setAnswers={setAnswers}
               displayQuestions={displayQuestions}

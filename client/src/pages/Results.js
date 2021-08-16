@@ -6,39 +6,13 @@ const Results = ({answers, displayQuestions}) => {
 
   //console.log(props.displayQuestions);
   //console.log(props.answers);
-/*
-  let corr = correct;
-  let incorr = incorrect;
-  let unans = 0;
 
-  if (displayQuestions.length > 0)
-  {
-    for (let i=0; i<displayQuestions.length; i++) {
-      if (answers[displayQuestions[i].number].length > 0) {
-        if (answers[displayQuestions[i].number] == displayQuestions[i].answer) {
-          correct++;
-        } else {
-          incorrect++;
-        }
-      }
-      else {
-        unanswered++;         
-      }
-    }
+  //let corr = correct;
+  //let incorr = incorrect;
+  //let unans = 0;
 
-    //     updateUserLevel($id: $id, correct: $correct, incorrect: $incorrect, unanswered:$unanswered)
-    const { data } = useMutation(UPDATE_USER_LEVEL, {
-      variables: {
-        id: _id,
-        correct: correct,
-        incorrect: incorrect,
-        unanswered: unanswered
-      }
-    });
-  
-  }
 
-*/
+
 
   //console.log("correct= ", correct, "  incorrect= ", incorrect, "  unanswered= ", unanswered )
 
