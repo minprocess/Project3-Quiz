@@ -29,7 +29,7 @@ const QuestionList = ({handleFormSubmit, answers, setAnswers, displayQuestions})
       <ol>
         { (displayQuestions || []).map((question) => (
           <li key={question.number}>
-            <span className="pt-2" style={myStyle}>
+            <span className="pt-5" style={myStyle}>
               {question.left}
               {question.choices.length ? (
                 <select name={question.number} onChange={handleChange}>

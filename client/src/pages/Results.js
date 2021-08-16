@@ -1,35 +1,26 @@
 import React from 'react';
-import { useMutation } from '@apollo/client';
-import { UPDATE_USER_LEVEL } from '../utils/mutations';
+import { useQuery } from '@apollo/client';
+import { QUERY_ME } from '../utils/queries';
 
 const Results = ({answers, displayQuestions}) => {
 
-  //console.log(props.displayQuestions);
-  //console.log(props.answers);
-
-  //let corr = correct;
-  //let incorr = incorrect;
-  //let unans = 0;
-
-
-
-
-  //console.log("correct= ", correct, "  incorrect= ", incorrect, "  unanswered= ", unanswered )
-
+  const { data: userData } = useQuery(QUERY_ME);
+  console.log ("userData")
+  console.log (userData)
+  const padStyle = {padding: "10px", border:"1px solid gray", borderCollapse: "collapse"};
   return (
-
-      <div className="flex-row justify-center">
-        <div className="col-12 col-md-8 mb-3">
-
-        
+    <div>
+      <h4>Score including this quiz</h4>
+      <p>Correct: {userData?.me.correct}</p>
+      <p>Incorrect: {userData?.me.incorrect}</p>
+      <p>Unanswered: {userData?.me.unanswered}</p>
+      <table>
+        <thead><tr><th style={padStyle}>Question</th><th style={padStyle}>Your answer</th><th style={padStyle}>Correct answer</th></tr></thead>
         { (displayQuestions || []).map((question, index) => (
-            <span className="pt-2">
-                <tr><td>{question.left}</td><td>______________</td><td>{question.right}</td><td>{answers[question.number]}<td>{question.answer}</td></td></tr>
-            </span>
-          ))}
-        </div>
-      </div>
-
+            <tr><td style={padStyle}>{question.left} ______________ {question.right}</td><td style={padStyle}>   {answers[question.number]}   </td><td style={padStyle}>{question.answer}</td></tr>
+          ))}    
+      </table>
+    </div>
   );
 };
 
