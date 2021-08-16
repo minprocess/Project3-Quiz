@@ -17,7 +17,14 @@ const Results = ({answers, displayQuestions}) => {
       <table>
         <thead><tr><th style={padStyle}>Question</th><th style={padStyle}>Your answer</th><th style={padStyle}>Correct answer</th></tr></thead>
         { (displayQuestions || []).map((question, index) => (
-            <tr><td style={padStyle}>{question.left} ______________ {question.right}</td><td style={padStyle}>   {answers[question.number]}   </td><td style={padStyle}>{question.answer}</td></tr>
+            <tr><td style={padStyle}>{question.left} ______________ {question.right}
+            {question.translation.length > 0 &&
+              <div>
+                <br/>
+                {question.translation}
+              </div>
+            }
+            </td><td style={padStyle}>   {answers[question.number]}   </td><td style={padStyle}>{question.answer}</td></tr>
           ))}    
       </table>
     </div>

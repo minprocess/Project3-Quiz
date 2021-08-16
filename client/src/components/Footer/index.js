@@ -16,16 +16,7 @@ const Footer = () => {
           </button>
         )}
         <h4>
-          Made with{' '}
-          <span
-            className="emoji"
-            role="img"
-            aria-label="heart"
-            aria-hidden="false"
-          >
-            ❤️
-          </span>{' '}
-          by the Quizzler team.
+          Made with je-ne-sais-pas-quoi by the Quizzler team.
         </h4>
       </div>
     </footer>

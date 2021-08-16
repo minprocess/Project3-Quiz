@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 
 const QuestionList = ({handleFormSubmit, answers, setAnswers, displayQuestions}) => {
   const myStyle = {display: "inline; !important"}
+  const liStyle = {paddingTop: "15px"};
   const history = useHistory()
 
   // Save the characters that the user types in or clicks in the dropdowns
@@ -24,12 +25,14 @@ const QuestionList = ({handleFormSubmit, answers, setAnswers, displayQuestions})
     history.push("/results")
   }
 
+
+
   return (
     <>
       <ol>
         { (displayQuestions || []).map((question) => (
-          <li key={question.number}>
-            <span className="pt-5" style={myStyle}>
+          <li key={question.number} style={liStyle}>
+            <span>
               {question.left}
               {question.choices.length ? (
                 <select name={question.number} onChange={handleChange}>
@@ -50,13 +53,13 @@ const QuestionList = ({handleFormSubmit, answers, setAnswers, displayQuestions})
             </span>
             {question.translation.length > 0 &&
               <div>
-                <br></br>
+                <br/>
                 {question.translation}
               </div>
             }
             {question.hint.length > 0 &&
               <div>
-                <br></br>
+                <br/>
                 {question.hint}
               </div>
             }
