@@ -50,6 +50,12 @@ const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
   };
 
   useEffect(() => {
+    let i = 0
+    for (i=0; i<10000; i++)
+    {
+      i++
+    }
+    console.log(i)
     //console.log(data?.questions)
     if (userData && data) {
       //console.log("in if(userData) UseEffect")
