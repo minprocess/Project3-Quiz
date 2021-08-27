@@ -7,6 +7,9 @@ import { QUERY_QUESTIONS, QUERY_ME } from '../utils/queries';
 import { UPDATE_USER_LEVEL } from '../utils/mutations';
 
 const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
+
+  console.log("\n\n****** Page Quiz.js ***********\n\n")
+
   const { data: userData } = useQuery(QUERY_ME);
   //console.log("\n\nuserData queryme Quiz.js")
   //console.log(userData?.me)
@@ -50,12 +53,7 @@ const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
   };
 
   useEffect(() => {
-    let i = 0
-    for (i=0; i<10000; i++)
-    {
-      i++
-    }
-    console.log(i)
+
     //console.log(data?.questions)
     if (userData && data) {
       //console.log("in if(userData) UseEffect")

@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 // Enable access to .env variables
 require('dotenv').config();
 
-const secret = process.env.apple;
+const secret = process.env.ACCESS_TOKEN_SECRET;
 const expiration = '2h';
 
 module.exports = {
