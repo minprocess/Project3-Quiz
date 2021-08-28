@@ -9,7 +9,7 @@ This app is deployed on Heroku at
 ## Installation
 The GitHub repository for this app is  
 
-[https://github.com/minprocess/Project3-Quiz](https://github.com/minprocess/Project3-Quiz)
+[https://github.com/minprocess/Quizzler](https://github.com/minprocess/Quizzler)
 
 ### Tech used
 
