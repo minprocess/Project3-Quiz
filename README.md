@@ -37,7 +37,12 @@ The snapshot below shows the homepage of Quizzler.
 
 ![screen capture of a quiz example](./images-readme/quiz-screen-capture.png)  
 
+To seed the database with 10 questions at A1 level and 10 questions at A2 level start a terminal (in Visual Studio Code or Git Bash), cd to the root level of the project and type the command
+`npm run seed`
+See `scripts` in package.json
 
+To start the app in your default web browser start a terminal (in Visual Studio Code or Git Bash), cd to the root level of the project and type the command
+`npm run develop`
 
 ## Credits
 

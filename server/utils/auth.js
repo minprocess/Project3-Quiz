@@ -18,6 +18,7 @@ module.exports = {
       return req;
     }
 
+    // secret is set in .env by setting ACCESS_TOKEN_SECRET
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;

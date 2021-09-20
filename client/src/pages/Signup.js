@@ -23,9 +23,9 @@ const Signup = () => {
     });
   };
 
+  // Handler for signup page submit button click
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
 
     try {
       const { data } = await addUser({

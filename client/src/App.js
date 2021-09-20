@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -50,6 +50,10 @@ function App() {
   // The Quiz page is responsible for creating the displayQuestions
   // The Quiz page is one of the routes
   const [displayQuestions, setDisplayQuestions] = useState([]);
+
+  useEffect(() => {
+    document.title = "Portfolio"
+    }, [])
 
   return (
     <ApolloProvider client={client}>

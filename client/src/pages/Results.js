@@ -1,12 +1,13 @@
+// This Results pages displays the number of correct, incorrect and unanswered questions after the user clicks the submit answers button.
+// The user answers and correct answers are shown
+
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 
 const Results = ({answers, displayQuestions}) => {
-
   const { data: userData } = useQuery(QUERY_ME);
-  console.log ("userData")
-  console.log (userData)
+
   const padStyle = {padding: "10px", border:"1px solid gray", borderCollapse: "collapse"};
   return (
     <div>

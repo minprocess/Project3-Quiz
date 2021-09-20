@@ -7,19 +7,13 @@ import { QUERY_QUESTIONS, QUERY_ME } from '../utils/queries';
 import { UPDATE_USER_LEVEL } from '../utils/mutations';
 
 const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
-
-  console.log("\n\n****** Page Quiz.js ***********\n\n")
-
   const { data: userData } = useQuery(QUERY_ME);
-  //console.log("\n\nuserData queryme Quiz.js")
-  //console.log(userData?.me)
 
   const { loading, data } = useQuery(QUERY_QUESTIONS, {variables: {limit: 5, level: userData?.me?.level || "A1"}});
   
-  //console.log("Quiz.js loading", loading)
-  // console.log("Quiz.js questions.length", data.questions.length)
   const [updateUser] = useMutation(UPDATE_USER_LEVEL);
 
+  // This function is passed to the QuestionList component when the user finishes answering questions and click the Submit button
   const handleFormSubmit = async () => {
     let correct = userData.me.correct;
     let incorrect = userData.me.incorrect;
@@ -36,7 +30,6 @@ const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
         unanswered++;         
       }
     }
-    console.log("corr, incorr, unans", correct, incorrect, unanswered)
     try {
       const { data } = await updateUser({
         variables: {
@@ -52,15 +45,14 @@ const Quiz = ({answers, setAnswers, displayQuestions, setDisplayQuestions}) => {
     }
   };
 
+  // This parameters in this call to useEffect are 1) an anonymous callback function which sets the displayQuestions 
+  // array with the questions returned from the database and 2) an optional array of dependencies. The presence of
+  // the array in the parameter list means that the callback is executed only if the array has changed
   useEffect(() => {
-
-    //console.log(data?.questions)
     if (userData && data) {
-      //console.log("in if(userData) UseEffect")
       setDisplayQuestions(data.questions)
     }
     else {
-      //console.log("in else UseEffect")
       setDisplayQuestions([])
     }
   }, [data?.questions]);

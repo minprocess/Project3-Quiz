@@ -19,10 +19,9 @@ const Login = (props) => {
     });
   };
 
-  // submit form
+  // submit form for user login
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
     try {
       const { data } = await login({
         variables: { ...formState },
