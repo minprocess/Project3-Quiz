@@ -14,7 +14,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-react": "^7.32.2"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

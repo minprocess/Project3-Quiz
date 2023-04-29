@@ -6,7 +6,6 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 const QuestionList = ({handleFormSubmit, answers, setAnswers, displayQuestions}) => {
-  const myStyle = {display: "inline; !important"}
   const liStyle = {paddingTop: "15px"};
   const history = useHistory()
 
