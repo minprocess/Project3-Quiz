@@ -52,7 +52,7 @@ function App() {
   const [displayQuestions, setDisplayQuestions] = useState([]);
 
   useEffect(() => {
-    document.title = "Portfolio"
+    document.title = "Quizzler"
     }, [])
 
   return (
