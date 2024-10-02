@@ -42,7 +42,7 @@ const client = new ApolloClient({
 });
 
 function App() {
-
+  console.log("App.js")
   // resp is user response. That is the answer to a question
   // The component QuestionList is repsonsible for displaying the questions and get the answers
   const [answers, setAnswers] = useState([]);
